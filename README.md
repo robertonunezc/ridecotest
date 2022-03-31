@@ -7,3 +7,6 @@
 ## Deployment steps with docker and docker-compose
 - Create a .evn file from the .env_example
 - docker-compose up --build 
+
+# Access credential
+THe credential to access the Django admin and the frontend app are the same and are configured in the .env file.
