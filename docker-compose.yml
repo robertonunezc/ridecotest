@@ -16,10 +16,12 @@ services:
     restart: always
   db:
     image: 'postgres:12'
+    env_file:
+      - ./.env
     environment:
-      POSTGRES_USER: ridecotest
-      POSTGRES_DB: ridecotest
-      POSTGRES_PASSWORD: Rid3cotest123.
+      POSTGRES_USER: ${SQL_USER}
+      POSTGRES_DB: ${SQL_DATABASE}
+      POSTGRES_PASSWORD: ${SQL_PASSWORD}
     volumes:
       - .pgdata:/var/lib/posgresql/data
     ports:
